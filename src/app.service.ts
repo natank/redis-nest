@@ -1,5 +1,4 @@
-import { Inject, Injectable, OnModuleInit } from '@nestjs/common';
-import { createClient } from 'redis'
+import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
@@ -20,5 +19,9 @@ export class AppService {
     } catch (error) {
       return error;
     }
+  }
+
+  async produceMessage(message: string) {
+
   }
 }
